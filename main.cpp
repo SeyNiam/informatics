@@ -59,39 +59,30 @@ int main()
 		if (order == 1) { // Случайный
 			if (length == 1) { // Сотни
 				srand(time(0));
-				array_size = hundreds; // Задаётся размер одномерного массива
-				array = new int[array_size]; // Выделение объема памяти, необходимого для хранения запрашиваемого массива
-				for (int counter = 0; counter < array_size; counter++){
-					array[counter] = rand() % 50 - rand() % 50; // Заполнение массива случайными значениями в диапазоне от -49 до 49 включительно
-					cout << array[counter] << " "; // Печать элементов одномерного массива array
-				}
+				array_size = hundreds; // Задаётся размер одномерного массива				
 			}
 			else { // Тысячи
 				srand(time(0));
 				array_size = thousands; // Задаётся размер одномерного массива
-				array = new int[array_size]; // Выделение объема памяти, необходимого для хранения запрашиваемого массива
-				for (int counter = 0; counter < array_size; counter++){
-					array[counter] = rand() % 50 - rand() % 50; // Заполнение массива случайными значениями в диапазоне от -49 до 49 включительно
-					cout << array[counter] << " "; // Печать элементов одномерного массива array
-				}
+			}
+			array = new int[array_size]; // Выделение объема памяти, необходимого для хранения запрашиваемого массива
+			for (int counter = 0; counter < array_size; counter++) {
+				array[counter] = rand() % 50 - rand() % 50; // Заполнение массива случайными значениями в диапазоне от -49 до 49 включительно
+				cout << array[counter] << " "; // Печать элементов одномерного массива array
 			}
 		}
 		else { // Упорядоченный
 			if (length == 1) { // Сотни
 				array_size = hundreds; // Задаётся размер одномерного массива
 				array = new int[array_size]; // Выделение объема памяти, необходимого для хранения запрашиваемого массива
-				for (int counter = 0; counter < array_size; counter++){
-					array[counter] = counter;
-					cout << array[counter] << " "; // Печать элементов одномерного массива array
-				}
 			}
 			else { // Тысячи
 				array_size = thousands; // Задаётся размер одномерного массива
 				array = new int[array_size]; // Выделение объема памяти, необходимого для хранения запрашиваемого массива
-				for (int counter = 0; counter < array_size; counter++){
-					array[counter] = counter;
-					cout << array[counter] << " "; // Печать элементов одномерного массива array
-				}
+			}
+			for (int counter = 0; counter < array_size; counter++) {
+				array[counter] = counter;
+				cout << array[counter] << " "; // Печать элементов одномерного массива array
 			}
 		}
 
