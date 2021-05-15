@@ -108,10 +108,6 @@ int main()
 			}
 
 			end_time = clock(); //  онечное врем€
-			// ¬ывод отсортированного массива
-			for (int counter = 0; counter < array_size; counter++){
-				cout << array[counter] << " "; // печать элементов отсортированного одномерного массива array
-			}
 			break;
 		case 2: 
 			cout << "\n\nBubble sort with flag\n";
@@ -131,10 +127,6 @@ int main()
 			} while (sortFlag);
 
 			end_time = clock(); //  онечное врем€
-			// ¬ывод отсортированного массива
-			for (int counter = 0; counter < array_size; counter++) {
-				cout << array[counter] << " "; // печать элементов отсортированного одномерного массива array
-			}
 			break;
 		case 3: 
 			cout << "\n\nShaker sort\n";
@@ -171,13 +163,12 @@ int main()
 			}
 
 			end_time = clock(); //  онечное врем€
-			// ¬ывод отсортированного массива
-			for (int counter = 0; counter < array_size; counter++) {
-				cout << array[counter] << " "; // печать элементов отсортированного одномерного массива array
-			}
 			break;
 		}
-
+		// ¬ывод отсортированного массива
+		for (int counter = 0; counter < array_size; counter++) {
+			cout << array[counter] << " "; // печать элементов отсортированного одномерного массива array
+		}
 
 		search_time = (end_time - start_time); // »скомое врем€
 		cout << "\nRealisation time: "<< search_time << " ms.";
